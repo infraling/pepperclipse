@@ -1,0 +1,57 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <parent>
+    <artifactId>pepperclipse</artifactId>
+    <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+    <version>1.1.6-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper.core.source</artifactId>
+  <packaging>eclipse-feature</packaging>
+  <name>Pepper Core Source Feature</name>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-logReader.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-exceptions.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-modules.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-workflow.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-framework.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+  </dependencies>
+
+</project>

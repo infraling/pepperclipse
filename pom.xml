@@ -1,0 +1,473 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+  <artifactId>pepperclipse</artifactId>
+  <version>1.1.6-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Pepperclipse</name>
+  <description>Eclipse Wrappers for Pepper</description>
+
+  <organization>
+    <name>Humboldt Univerity of Berlin, INRIA</name>
+  </organization>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.test.skip>true</maven.test.skip>
+
+    <tycho.version>0.19.0</tycho.version>
+
+    <pepper.core.version>1.1.6</pepper.core.version>
+    <pepper.core.version.osgi>1.1.6</pepper.core.version.osgi>
+    <!--
+    <pepper.core.version>1.1.6-SNAPSHOT</pepper.core.version>
+    <pepper.core.version.osgi>1.1.6.SNAPSHOT</pepper.core.version.osgi>
+    -->
+
+    <pepper.module.paula.version>1.1.4</pepper.module.paula.version>
+    <pepper.module.paula.version.osgi>1.1.4</pepper.module.paula.version.osgi>
+
+    <pepper.repository.location.local>file:/D:/Software/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.local>
+    <pepper.repository.location.mirror>R:/P2/Saltomic/1.1.6</pepper.repository.location.mirror>
+    <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
+  </properties>
+
+
+  <profiles>
+
+    <!--
+      Profile to build OSGI compatible bundles, here: build Eclipse source
+      bundles for standard Maven source jars
+    -->
+    <profile>
+      <id>osgi</id>
+      <modules>
+        <module>pepper-plugin-logReader-source</module>
+        <module>pepper-plugin-exceptions-source</module>
+        <module>pepper-plugin-modules-source</module>
+        <module>pepper-plugin-workflow-source</module>
+        <module>pepper-plugin-framework-source</module>
+        <module>pepper-plugin-module-paula-source</module>
+      </modules>
+
+      <build>
+
+        <pluginManagement>
+
+          <plugins>
+
+            <plugin>
+              <groupId>org.apache.felix</groupId>
+              <artifactId>maven-bundle-plugin</artifactId>
+              <version>2.3.7</version>
+              <extensions>true</extensions>
+            </plugin>
+
+            <!--
+              preconfigured plugin to unpack sources of a base bundle
+            -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-dependency-plugin</artifactId>
+              <version>2.8</version>
+              <executions>
+                <execution>
+                  <id>unpack-base-bundle-sources</id>
+                  <phase>process-classes</phase>
+                  <goals>
+                    <goal>unpack-dependencies</goal>
+                  </goals>
+                  <configuration>
+                    <outputDirectory>${project.build.directory}/${baseBundle.groupId}/${baseBundle.artifactId}/source</outputDirectory>
+                    <classifier>sources</classifier>
+                    <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+                    <overWrite>true</overWrite>
+                    <overWriteReleases>true</overWriteReleases>
+                    <overWriteSnapshots>true</overWriteSnapshots>
+                    <includeGroupIds>${baseBundle.groupId}</includeGroupIds>
+                    <includeArtifactIds>${baseBundle.artifactId}</includeArtifactIds>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+
+            <!--
+              preconfigured plugin to repack the unpacked sources of a base bundle
+              as eclipse source plugin
+            -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>2.4</version>
+              <configuration>
+                <classesDirectory>${project.build.directory}/${baseBundle.groupId}/${baseBundle.artifactId}/source</classesDirectory>
+                <forceCreation>true</forceCreation>
+                <excludes>
+                  <exclude>**/META-INF/**</exclude>
+                </excludes>
+                <archive>
+                  <manifestEntries>
+                    <Bundle-SymbolicName>${baseBundle.groupId}.${baseBundle.artifactId}.source</Bundle-SymbolicName>
+                    <Bundle-Version>${baseBundle.version.osgi}</Bundle-Version>
+                    <Eclipse-SourceBundle>${baseBundle.groupId}.${baseBundle.artifactId};version="${baseBundle.version.osgi}";roots="."</Eclipse-SourceBundle>
+                    <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </plugin>
+
+          </plugins>
+
+        </pluginManagement>
+
+      </build>
+
+    </profile>
+
+    <!--
+      Profile to build Eclipse features for Pepper and to mirror them to a local
+      P2 repository
+    -->
+    <profile>
+      <id>eclipse</id>
+      <modules>
+        <module>pepper-target</module>
+        <module>pepper-feature-core</module>
+        <module>pepper-feature-core-source</module>
+        <module>pepper-feature-modules</module>
+        <module>pepper-feature-modules-source</module>
+        <module>pepper-repository</module>
+      </modules>
+
+      <build>
+
+        <plugins>
+
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-maven-plugin</artifactId>
+            <version>${tycho.version}</version>
+            <extensions>true</extensions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>target-platform-configuration</artifactId>
+            <version>${tycho.version}</version>
+            <configuration>
+              <target>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>pepper-target</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>pepper-target</classifier>
+                </artifact>
+              </target>
+              <pomDependencies>consider</pomDependencies>
+              <environments>
+                <!--
+                <environment>
+                  <os>linux</os>
+                  <ws>gtk</ws>
+                  <arch>x86</arch>
+                </environment>
+                <environment>
+                  <os>linux</os>
+                  <ws>gtk</ws>
+                  <arch>x86_64</arch>
+                </environment>
+                -->
+                <environment>
+                  <os>win32</os>
+                  <ws>win32</ws>
+                  <arch>x86</arch>
+                </environment>
+                <!--
+                <environment>
+                  <os>win32</os>
+                  <ws>win32</ws>
+                  <arch>x86_64</arch>
+                </environment>
+                <environment>
+                  <os>macosx</os>
+                  <ws>cocoa</ws>
+                  <arch>x86_64</arch>
+                </environment>
+                -->
+              </environments>
+            </configuration>
+          </plugin>
+
+        </plugins>
+
+        <pluginManagement>
+
+          <plugins>
+
+            <plugin>
+              <groupId>org.eclipse.tycho</groupId>
+              <artifactId>tycho-p2-repository-plugin</artifactId>
+              <version>${tycho.version}</version>
+              <configuration>
+                <includeAllDependencies>${pepper.repository.location.includeAllDependencies}</includeAllDependencies>
+              </configuration>
+            </plugin>
+
+            <plugin>
+              <groupId>org.eclipse.tycho.extras</groupId>
+              <artifactId>tycho-p2-extras-plugin</artifactId>
+              <version>${tycho.version}</version>
+              <executions>
+                <execution>
+                  <phase>install</phase>
+                  <goals>
+                    <goal>mirror</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <!-- goal "mirror" -->
+                <source>
+                  <repository>
+                    <url>${pepper.repository.location.local}</url>
+                    <layout>p2</layout>
+                  </repository>
+                </source>
+                <destination>${pepper.repository.location.mirror}</destination>
+                <!--
+                <ius>
+                  <iu>
+                    <id>...</id>
+                  </iu>
+                </ius>
+                <filter>
+                  <osgi.os>win32</osgi.os>
+                  <osgi.ws>win32</osgi.ws>
+                  <osgi.arch>x86</osgi.arch>
+                </filter>
+                -->
+
+                <latestVersionOnly>true</latestVersionOnly>
+
+                <followStrictOnly>false</followStrictOnly>
+                <includeOptional>false</includeOptional>
+                <includeNonGreedy>false</includeNonGreedy>
+
+                <!-- goal "publish-features-and-bundles" -->
+                <!--
+                <sourceLocation>${project.build.directory}/repository</sourceLocation>
+                <artifactRepositoryLocation>${pepper.repository.location.mirror}</artifactRepositoryLocation>
+                <metadataRepositoryLocation>${pepper.repository.location.mirror}</metadataRepositoryLocation>
+                -->
+                <!-- goals "mirror" as well as "publish-features-and-bundles" -->
+                <compress>true</compress>
+                <append>true</append>
+              </configuration>
+            </plugin>
+
+          </plugins>
+
+        </pluginManagement>
+
+      </build>
+
+    </profile>
+
+  </profiles>
+
+  <dependencyManagement>
+
+    <dependencies>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepper-logReader</artifactId>
+        <version>${pepper.core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepper-exceptions</artifactId>
+        <version>${pepper.core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepper-modules</artifactId>
+        <version>${pepper.core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepper-workflow</artifactId>
+        <version>${pepper.core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepper-framework</artifactId>
+        <version>${pepper.core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>misc-TupleConnector</artifactId>
+        <version>1.1.296</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-CoNLLModules</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-CoraXMLModules</artifactId>
+        <version>1.1.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-DoNothingModules</artifactId>
+        <version>1.1.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-DotModules</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-ElanModules</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>misc-EXMARaLDAModel</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-EXMARaLDAModules</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-FALKOModules</artifactId>
+        <version>1.1.3-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-MMAX2Modules</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-nlpModules</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-PAULAModules</artifactId>
+        <version>${pepper.module.paula.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>misc-RelANNISModel</artifactId>
+        <version>1.1.3-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-RelANNISModules</artifactId>
+        <version>1.1.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-RidgesModules</artifactId>
+        <version>1.0.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-RSTModules</artifactId>
+        <version>0.0.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-SaltXMLModules</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-TigerModules</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>misc-TreetaggerModel</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-TreetaggerModules</artifactId>
+        <version>1.2.3</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-TueBaDZModules</artifactId>
+        <version>0.0.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>pepperModules-UAMModules</artifactId>
+        <version>0.0.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>edu.tufts.perseus</groupId>
+        <artifactId>pepperModules-PerseusModules</artifactId>
+        <version>0.0.4</version>
+      </dependency>
+
+    </dependencies>
+
+  </dependencyManagement>
+
+  <repositories>
+
+    <repository>
+      <id>korpling</id>
+      <name>korpling maven repo</name>
+      <url>http://korpling.german.hu-berlin.de/maven2</url>
+    </repository>
+
+  </repositories>
+
+</project>

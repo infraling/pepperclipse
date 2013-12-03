@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.hu_berlin.german.korpling.saltnpepper.pepper.core_1.1.6.qualifier.jar" id="de.hu_berlin.german.korpling.saltnpepper.pepper.core" version="1.1.6.qualifier">
+      <category name="de.hu_berlin.german.korpling.saltnpepper.pepper"/>
+   </feature>
+   <feature url="features/de.hu_berlin.german.korpling.saltnpepper.pepper.core.source_1.1.6.qualifier.jar" id="de.hu_berlin.german.korpling.saltnpepper.pepper.core.source" version="1.1.6.qualifier">
+      <category name="de.hu_berlin.german.korpling.saltnpepper.pepper"/>
+   </feature>
+   <feature url="features/de.hu_berlin.german.korpling.saltnpepper.pepper.modules_1.1.6.qualifier.jar" id="de.hu_berlin.german.korpling.saltnpepper.pepper.modules" version="1.1.6.qualifier">
+      <category name="de.hu_berlin.german.korpling.saltnpepper.pepper"/>
+   </feature>
+   <feature url="features/de.hu_berlin.german.korpling.saltnpepper.pepper.modules.source_1.1.6.qualifier.jar" id="de.hu_berlin.german.korpling.saltnpepper.pepper.modules.source" version="1.1.6.qualifier">
+      <category name="de.hu_berlin.german.korpling.saltnpepper.pepper"/>
+   </feature>
+   <category-def name="de.hu_berlin.german.korpling.saltnpepper.pepper" label="Pepper Bundles"/>
+</site>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.hu_berlin.german.korpling.saltnpepper.pepper.core"
+      label="Pepper Core Feature for Integration into Atomic"
+      version="1.1.6.qualifier"
+      provider-name="Humboldt Univerity of Berlin, INRIA">
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepper-logReader"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepper-exceptions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepper-modules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepper-workflow"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepper-framework"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

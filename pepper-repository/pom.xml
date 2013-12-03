@@ -1,0 +1,216 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <parent>
+    <artifactId>pepperclipse</artifactId>
+    <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+    <version>1.1.6-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>pepper-repository</artifactId>
+  <name>Pepper Repository</name>
+  <packaging>eclipse-repository</packaging>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepper-logReader</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-logReader.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepper-exceptions</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-exceptions.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepper-modules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-modules.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepper-workflow</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-workflow.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepper-framework</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-framework.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>misc-TupleConnector</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-CoNLLModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-CoraXMLModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-DoNothingModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-DotModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-ElanModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>misc-EXMARaLDAModel</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-EXMARaLDAModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-FALKOModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-MMAX2Modules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-nlpModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-PAULAModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
+      <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepperModules-PAULAModules.source</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>misc-RelANNISModel</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-RelANNISModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-RidgesModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-RSTModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-SaltXMLModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-TigerModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>misc-TreetaggerModel</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-TreetaggerModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-TueBaDZModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>pepperModules-UAMModules</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>edu.tufts.perseus</groupId>
+      <artifactId>pepperModules-PerseusModules</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.eclipse.tycho.extras</groupId>
+        <artifactId>tycho-p2-extras-plugin</artifactId>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+</project>

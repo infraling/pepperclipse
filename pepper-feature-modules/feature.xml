@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.hu_berlin.german.korpling.saltnpepper.pepper.modules"
+      label="Pepper Modules Feature for Integration into Atomic"
+      version="1.1.6.qualifier"
+      provider-name="Humboldt Univerity of Berlin, INRIA">
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.misc-TupleConnector"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-CoNLLModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-CoraXMLModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-DoNothingModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-DotModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-ElanModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.misc-EXMARaLDAModel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-EXMARaLDAModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-FALKOModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-MMAX2Modules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-nlpModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-PAULAModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.misc-RelANNISModel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-RelANNISModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-RidgesModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-SaltXMLModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-TigerModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.misc-TreetaggerModel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-TreetaggerModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-TueBaDZModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.hu_berlin.german.korpling.saltnpepper.pepperModules-UAMModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.tufts.perseus.pepperModules-PerseusModules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
