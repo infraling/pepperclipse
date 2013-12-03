@@ -13,19 +13,27 @@
   <artifactId>pepperclipse</artifactId>
   <version>1.1.6-SNAPSHOT</version>
   <packaging>pom</packaging>
+
   <name>Pepperclipse</name>
   <description>Eclipse Wrappers for Pepper</description>
 
   <organization>
-    <name>Humboldt Univerity of Berlin, INRIA</name>
+    <!-- HU Berlin is the primary software provider while FSU Jena is the assemblier -->
+    <name>Humboldt Univerity of Berlin, INRIA; Friedrich Schiller University Jena</name>
   </organization>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.test.skip>true</maven.test.skip>
 
+    <!-- Eclipse repository to resolve required bundles -->
+    <eclipse.repository.location>file:/R:/P2/Eclipse/3.7</eclipse.repository.location>
+    <!--
+    <eclipse.repository.location>http://download.eclipse.org/releases/indigo/</eclipse.repository.location>
+    -->
+
+    <!-- Version of Tycho -->
     <tycho.version>0.19.0</tycho.version>
 
+    <!-- Maven and OSGI version of the Pepper core modules -->
     <pepper.core.version>1.1.6</pepper.core.version>
     <pepper.core.version.osgi>1.1.6</pepper.core.version.osgi>
     <!--
@@ -33,14 +41,29 @@
     <pepper.core.version.osgi>1.1.6.SNAPSHOT</pepper.core.version.osgi>
     -->
 
+    <!-- Maven and OSGI version of Pepper modules whose source is to be included -->
     <pepper.module.paula.version>1.1.4</pepper.module.paula.version>
     <pepper.module.paula.version.osgi>1.1.4</pepper.module.paula.version.osgi>
 
-    <pepper.repository.location.local>file:/D:/Software/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.local>
+    <!-- Reactor and target mirror location of the Pepper repository -->
+    <pepper.repository.location.reactor>file:/D:/Software/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
     <pepper.repository.location.mirror>R:/P2/Saltomic/1.1.6</pepper.repository.location.mirror>
+    <!-- Whether to include bundles required by Pepper in the Pepper repository -->
     <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
+
+    <!-- Meven standard properties -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.test.skip>true</maven.test.skip>
+
   </properties>
 
+  <!-- Maven repository containing Salt'n'Pepper -->
+  <repositories>
+    <repository>
+      <id>Korpling</id>
+      <url>http://korpling.german.hu-berlin.de/maven2</url>
+    </repository>
+  </repositories>
 
   <profiles>
 
@@ -65,15 +88,17 @@
 
           <plugins>
 
+            <!--
             <plugin>
               <groupId>org.apache.felix</groupId>
               <artifactId>maven-bundle-plugin</artifactId>
               <version>2.3.7</version>
               <extensions>true</extensions>
             </plugin>
+            -->
 
             <!--
-              preconfigured plugin to unpack sources of a base bundle
+              Preconfigured plugin to unpack sources of a base bundle
             -->
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -101,7 +126,7 @@
             </plugin>
 
             <!--
-              preconfigured plugin to repack the unpacked sources of a base bundle
+              Preconfigured plugin to repack the unpacked sources of a base bundle
               as eclipse source plugin
             -->
             <plugin>
@@ -148,10 +173,24 @@
         <module>pepper-repository</module>
       </modules>
 
+      <!-- Eclipse repository to resolve required bundles -->
+      <!--
+      <repositories>
+        <repository>
+          <id>Eclipse</id>
+          <layout>p2</layout>
+          <url>${eclipse.repository.location}</url>
+        </repository>
+      </repositories>
+      -->
+
       <build>
 
         <plugins>
 
+          <!--
+            Plugin to activate Tycho extensions
+          -->
           <plugin>
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>tycho-maven-plugin</artifactId>
@@ -159,6 +198,9 @@
             <extensions>true</extensions>
           </plugin>
 
+          <!--
+            Eclipse target platform configuration
+          -->
           <plugin>
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>target-platform-configuration</artifactId>
@@ -173,6 +215,7 @@
                 </artifact>
               </target>
               <pomDependencies>consider</pomDependencies>
+              <resolver>p2</resolver>
               <environments>
                 <!--
                 <environment>
@@ -238,7 +281,7 @@
                 <!-- goal "mirror" -->
                 <source>
                   <repository>
-                    <url>${pepper.repository.location.local}</url>
+                    <url>${pepper.repository.location.reactor}</url>
                     <layout>p2</layout>
                   </repository>
                 </source>
@@ -459,15 +502,5 @@
     </dependencies>
 
   </dependencyManagement>
-
-  <repositories>
-
-    <repository>
-      <id>korpling</id>
-      <name>korpling maven repo</name>
-      <url>http://korpling.german.hu-berlin.de/maven2</url>
-    </repository>
-
-  </repositories>
 
 </project>

@@ -1,27 +1,25 @@
 Local build
 ===========
 
-1. Adjust maven properties and target configuration in
+1. Adjust maven properties, target configuration and Eclipse repository location
+   in
 
       ./pom.xml
-
-2. Adjust repository location in
-
       pepper-target/pepper-target.target
 
-3. Run test to build OSGI bundles
+2. Run test to build OSGI bundles
 
       mvn -P osgi package
 
-4. Install OSGI bundles into your local Maven repository
+3. Install OSGI bundles into your local Maven repository
 
       mvn -P osgi install
 
-5. Run test to build Eclipse bundles
+4. Run test to build Eclipse bundles
 
       mvn -P eclipse package
 
-6. Install Eclipse bundles into your local Maven repository
+5. Install Eclipse bundles into your local Maven repository
 
       mvn -P eclipse install
 
