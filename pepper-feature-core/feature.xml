@@ -2,7 +2,7 @@
 <feature
       id="de.hu_berlin.german.korpling.saltnpepper.pepper.core"
       label="Pepper Core Feature for Integration into Atomic"
-      version="1.1.6.qualifier"
+      version="1.2.0.qualifier"
       provider-name="Humboldt Univerity of Berlin, INRIA; Friedrich Schiller University Jena">
 
    <plugin

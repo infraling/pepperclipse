@@ -69,7 +69,7 @@ How can I add the source of a special Pepper import/export module?
 
 1. Make sure the module is contained in the Pepper Modules Feature (see above)
 
-2. Define a new property containing the version of the Pepper module in
+2. Define a new Maven property containing the version of the Pepper module in
 
       ./pom.xml
 

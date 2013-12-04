@@ -11,7 +11,7 @@
 
   <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
   <artifactId>pepperclipse</artifactId>
-  <version>1.1.6-SNAPSHOT</version>
+  <version>1.2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Pepperclipse</name>
@@ -33,6 +33,14 @@
     <!-- Version of Tycho -->
     <tycho.version>0.19.0</tycho.version>
 
+    <!-- Maven and OSGI version of the Salt modules -->
+    <salt.version>1.1.7</salt.version>
+    <salt.version.osgi>1.1.7</salt.version.osgi>
+    <!--
+    <salt.version>1.1.7-SNAPSHOT</salt.version>
+    <salt.version.osgi>1.1.7.SNAPSHOT</salt.version.osgi>
+    -->
+
     <!-- Maven and OSGI version of the Pepper core modules -->
     <pepper.core.version>1.1.6</pepper.core.version>
     <pepper.core.version.osgi>1.1.6</pepper.core.version.osgi>
@@ -47,9 +55,9 @@
 
     <!-- Reactor and target mirror location of the Pepper repository -->
     <pepper.repository.location.reactor>file:/D:/Software/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
-    <pepper.repository.location.mirror>R:/P2/Saltomic/1.1.6</pepper.repository.location.mirror>
+    <pepper.repository.location.mirror>R:/P2/Saltomic/1.2.0</pepper.repository.location.mirror>
     <!-- Whether to include bundles required by Pepper in the Pepper repository -->
-    <pepper.repository.location.includeAllDependencies>false</pepper.repository.location.includeAllDependencies>
+    <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
 
     <!-- Meven standard properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,6 +82,9 @@
     <profile>
       <id>osgi</id>
       <modules>
+        <module>salt-plugin-graph-source</module>
+        <module>salt-plugin-saltCommon-source</module>
+        <module>salt-plugin-saltCore-source</module>
         <module>pepper-plugin-logReader-source</module>
         <module>pepper-plugin-exceptions-source</module>
         <module>pepper-plugin-modules-source</module>
@@ -166,6 +177,8 @@
       <id>eclipse</id>
       <modules>
         <module>pepper-target</module>
+        <module>salt-feature</module>
+        <module>salt-feature-source</module>
         <module>pepper-feature-core</module>
         <module>pepper-feature-core-source</module>
         <module>pepper-feature-modules</module>
@@ -330,6 +343,24 @@
   <dependencyManagement>
 
     <dependencies>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-graph</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCore</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCommon</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
