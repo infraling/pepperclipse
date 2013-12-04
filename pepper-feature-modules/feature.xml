@@ -3,7 +3,7 @@
   id="de.hu_berlin.german.korpling.saltnpepper.pepper.modules"
   label="Pepper Modules Feature for Integration into Atomic"
   version="1.1.6.qualifier"
-  provider-name="Humboldt Univerity of Berlin, INRIA">
+  provider-name="Humboldt Univerity of Berlin, INRIA; Friedrich Schiller University Jena">
 
   <plugin
     id="de.hu_berlin.german.korpling.saltnpepper.misc-TupleConnector"
