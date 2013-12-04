@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+  id="de.hu_berlin.german.korpling.saltnpepper.salt.source"
+  label="Salt Source Feature for Integration into Atomic"
+  version="1.2.0.qualifier"
+  provider-name="Humboldt Univerity of Berlin, INRIA; Friedrich Schiller University Jena">
+
+  <plugin
+    id="de.hu_berlin.german.korpling.saltnpepper.salt-graph.source"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+
+  <plugin
+    id="de.hu_berlin.german.korpling.saltnpepper.salt-saltCore.source"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+
+  <plugin
+    id="de.hu_berlin.german.korpling.saltnpepper.salt-saltCommon.source"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+
+</feature>
