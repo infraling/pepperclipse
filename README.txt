@@ -19,7 +19,8 @@ Local build
 
       mvn -P eclipse package
 
-5. Install Eclipse bundles into your local Maven repository
+5. Install Eclipse bundles into your local Maven repository and add bundles to
+   the target P2 repository
 
       mvn -P eclipse install
 
@@ -48,11 +49,11 @@ timestamped.
 How can I add a special Pepper import/export module?
 ----------------------------------------------------
 
-1. Add the module as Maven dependency with the dependency management section of
+1. Add the module as Maven dependency to the dependency management section of
 
       ./pom.xml
 
-2. Add the module as Maven dependency with the dependency section of
+2. Add the module as Maven dependency to the dependency section of
 
       pepper-feature-modules/pom.xml
       pepper-repository/pom.xml
@@ -86,7 +87,7 @@ How can I add the source of a special Pepper import/export module?
 
       ./pom.xml
 
-5. Add the new Maven module as Maven dependency with the dependency section of
+5. Add the new Maven module as Maven dependency to the dependency section of
 
       pepper-feature-modules-source/pom.xml
       pepper-repository/pom.xml
