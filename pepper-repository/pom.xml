@@ -89,11 +89,6 @@
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
-      <artifactId>pepperModules-CoraXMLModules</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-DoNothingModules</artifactId>
     </dependency>
 
