@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?>
+<?pde version="3.6"?>
 
-<target name="Pepper Target">
-  <locations>
-    <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-      <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
-      <unit id="org.apache.log4j" version="0.0.0"/>
-      <unit id="org.slf4j.api" version="0.0.0"/>
-      <repository location="file:/R:/P2/Eclipse/3.7"/>
-      <!--repository location="http://download.eclipse.org/releases/indigo/"/-->
-    </location>
-  </locations>
+<target sequenceNumber="1">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.rcp.sdk.id" version="3.7.2.M20120208-0800"/>
+<unit id="org.eclipse.jetty.slf4jlogback.feature.group" version="7.5.1.201109140245"/>
+<repository location="http://download.eclipse.org/releases/indigo"/>
+</location>
+</locations>
 </target>
