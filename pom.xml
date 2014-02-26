@@ -67,6 +67,10 @@
 
   <!-- Maven repository containing Salt'n'Pepper -->
   <repositories>
+  	<repository>
+      <id>github-mvn-repo</id>
+      <url>https://raw.github.com/sdruskat/salt/mvn-repo</url>
+    </repository>
     <repository>
       <id>Korpling</id>
       <url>http://korpling.german.hu-berlin.de/maven2</url>
