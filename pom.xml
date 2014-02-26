@@ -368,6 +368,24 @@
 
       <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-graph.edit</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCore.edit</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCommon.edit</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
         <artifactId>pepper-logReader</artifactId>
         <version>${pepper.core.version}</version>
       </dependency>
