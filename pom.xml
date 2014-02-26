@@ -34,8 +34,8 @@
     <tycho.version>0.19.0</tycho.version>
 
     <!-- Maven and OSGI version of the Salt modules -->
-    <salt.version>1.1.7</salt.version>
-    <salt.version.osgi>1.1.7</salt.version.osgi>
+    <salt.version>1.1.8-SNAPSHOT</salt.version>
+    <salt.version.osgi>1.1.8-SNAPSHOT</salt.version.osgi>
     <!--
     <salt.version>1.1.7-SNAPSHOT</salt.version>
     <salt.version.osgi>1.1.7.SNAPSHOT</salt.version.osgi>
