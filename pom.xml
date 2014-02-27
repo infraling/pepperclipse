@@ -31,7 +31,7 @@
 
     <!-- Maven and OSGI version of the Salt modules -->
     <salt.version>1.1.8-SNAPSHOT</salt.version>
-    <salt.version.osgi>1.1.8-SNAPSHOT</salt.version.osgi>
+    <salt.version.osgi>1.1.8.SNAPSHOT</salt.version.osgi>
     <!--
     <salt.version>1.1.7-SNAPSHOT</salt.version>
     <salt.version.osgi>1.1.7.SNAPSHOT</salt.version.osgi>
@@ -50,8 +50,8 @@
     <pepper.module.paula.version.osgi>1.1.4</pepper.module.paula.version.osgi>
 
     <!-- Reactor and target mirror location of the Pepper repository -->
-    <pepper.repository.location.reactor>file:/home/stephan/git/pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
-    <pepper.repository.location.mirror>/home/stephan/Schreibtisch/peppo</pepper.repository.location.mirror>
+    <pepper.repository.location.reactor>file:/D:/Projekte/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
+    <pepper.repository.location.mirror>D:/Repository/P2/Saltomic/1.2.1</pepper.repository.location.mirror>
     <!-- Whether to include bundles required by Pepper in the Pepper repository -->
     <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
 
