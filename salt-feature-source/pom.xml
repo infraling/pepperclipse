@@ -23,21 +23,33 @@
   <dependencies>
 
     <dependency>
-      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
-      <artifactId>de.hu_berlin.german.korpling.saltnpepper.salt-graph.source</artifactId>
-      <version>${project.version}</version>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-graph.source</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
-      <artifactId>de.hu_berlin.german.korpling.saltnpepper.salt-saltCore.source</artifactId>
-      <version>${project.version}</version>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCore.source</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
-      <artifactId>de.hu_berlin.german.korpling.saltnpepper.salt-saltCommon.source</artifactId>
-      <version>${project.version}</version>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCommon.source</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-graph.edit.source</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCore.edit.source</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCommon.edit.source</artifactId>
     </dependency>
 
   </dependencies>

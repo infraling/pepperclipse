@@ -29,13 +29,8 @@
     <!-- Version of Tycho -->
     <tycho.version>0.19.0</tycho.version>
 
-    <!-- Maven and OSGI version of the Salt modules -->
+    <!-- Maven version of the Salt modules -->
     <salt.version>1.1.8-SNAPSHOT</salt.version>
-    <salt.version.osgi>1.1.8.SNAPSHOT</salt.version.osgi>
-    <!--
-    <salt.version>1.1.7-SNAPSHOT</salt.version>
-    <salt.version.osgi>1.1.7.SNAPSHOT</salt.version.osgi>
-    -->
 
     <!-- Maven and OSGI version of the Pepper core modules -->
     <pepper.core.version>1.1.6</pepper.core.version>
@@ -51,7 +46,7 @@
 
     <!-- Reactor and target mirror location of the Pepper repository -->
     <pepper.repository.location.reactor>file:/D:/Projekte/Atomic/Pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
-    <pepper.repository.location.mirror>D:/Repository/P2/Saltomic/1.2.1</pepper.repository.location.mirror>
+    <pepper.repository.location.mirror>D:/Repository/P2/Saltomic/1.2.0</pepper.repository.location.mirror>
     <!-- Whether to include bundles required by Pepper in the Pepper repository -->
     <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
 
@@ -82,9 +77,6 @@
     <profile>
       <id>osgi</id>
       <modules>
-        <module>salt-plugin-graph-source</module>
-        <module>salt-plugin-saltCommon-source</module>
-        <module>salt-plugin-saltCore-source</module>
         <module>pepper-plugin-logReader-source</module>
         <module>pepper-plugin-exceptions-source</module>
         <module>pepper-plugin-modules-source</module>
@@ -377,6 +369,42 @@
       <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
         <artifactId>salt-saltCommon.edit</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-graph.source</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCore.source</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCommon.source</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-graph.edit.source</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCore.edit.source</artifactId>
+        <version>${salt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+        <artifactId>salt-saltCommon.edit.source</artifactId>
         <version>${salt.version}</version>
       </dependency>
 

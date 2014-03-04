@@ -37,6 +37,21 @@
       <artifactId>salt-saltCommon</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCore.edit</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-saltCommon.edit</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
+      <artifactId>salt-graph.source</artifactId>
+    </dependency>
+
   </dependencies>
 
 </project>
