@@ -55,7 +55,7 @@
       <version>${project.version}</version>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepper-logReader</artifactId>
     </dependency>
@@ -97,7 +97,7 @@
       <groupId>de.uni_jena.iaa.linktype.atomic</groupId>
       <artifactId>de.hu_berlin.german.korpling.saltnpepper.pepper-workflow.source</artifactId>
       <version>${project.version}</version>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -135,10 +135,6 @@
       <artifactId>pepperModules-ElanModules</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
-      <artifactId>misc-EXMARaLDAModel</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -171,10 +167,6 @@
       <version>${project.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
-      <artifactId>misc-RelANNISModel</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -201,10 +193,6 @@
       <artifactId>pepperModules-TigerModules</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
-      <artifactId>misc-TreetaggerModel</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
