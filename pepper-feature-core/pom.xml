@@ -22,7 +22,7 @@
 
   <dependencies>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepper-logReader</artifactId>
     </dependency>
@@ -40,7 +40,7 @@
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepper-workflow</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>

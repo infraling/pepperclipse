@@ -32,25 +32,25 @@
       <artifactId>pepperModules-CoNLLModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-DoNothingModules</artifactId>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-DotModules</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-ElanModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>misc-EXMARaLDAModel</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -77,10 +77,10 @@
       <artifactId>pepperModules-PAULAModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>misc-RelANNISModel</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -97,20 +97,20 @@
       <artifactId>pepperModules-RSTModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-SaltXMLModules</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-TigerModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>misc-TreetaggerModel</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>

@@ -120,15 +120,15 @@
       <artifactId>pepperModules-CoNLLModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-DoNothingModules</artifactId>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-DotModules</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -183,10 +183,10 @@
       <artifactId>pepperModules-RSTModules</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
       <artifactId>pepperModules-SaltXMLModules</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>

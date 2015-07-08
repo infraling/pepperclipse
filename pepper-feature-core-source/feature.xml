@@ -6,34 +6,6 @@
       provider-name="Humboldt Univerity of Berlin, INRIA; Friedrich Schiller University Jena">
 
    <plugin
-         id="de.hu_berlin.german.korpling.saltnpepper.pepper-logReader.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.hu_berlin.german.korpling.saltnpepper.pepper-exceptions.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.hu_berlin.german.korpling.saltnpepper.pepper-modules.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.hu_berlin.german.korpling.saltnpepper.pepper-workflow.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="de.hu_berlin.german.korpling.saltnpepper.pepper-framework.source"
          download-size="0"
          install-size="0"

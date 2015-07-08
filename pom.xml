@@ -81,10 +81,10 @@
         <module>salt-plugin-graph-source</module>
         <module>salt-plugin-saltCommon-source</module>
         <module>salt-plugin-saltCore-source</module>
-        <module>pepper-plugin-logReader-source</module>
-        <module>pepper-plugin-exceptions-source</module>
-        <module>pepper-plugin-modules-source</module>
-        <module>pepper-plugin-workflow-source</module>
+        <!-- <module>pepper-plugin-logReader-source</module> -->
+        <!-- <module>pepper-plugin-exceptions-source</module> -->
+        <!-- <module>pepper-plugin-modules-source</module> -->
+        <!-- <module>pepper-plugin-workflow-source</module> -->
         <module>pepper-plugin-framework-source</module>
         <module>pepper-plugin-module-paula-source</module>
       </modules>
@@ -400,17 +400,17 @@
         <version>1.1.6</version>
       </dependency>
 
-      <dependency>
+      <!-- <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
         <artifactId>pepperModules-DoNothingModules</artifactId>
         <version>2.1.1</version>
-      </dependency>
+      </dependency> -->
 
-      <dependency>
+      <!-- <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
         <artifactId>pepperModules-DotModules</artifactId>
         <version>2.1.1</version>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
@@ -478,11 +478,11 @@
         <version>0.0.6</version>
       </dependency>
 
-      <dependency>
+      <!-- <dependency>
         <groupId>de.hu_berlin.german.korpling.saltnpepper</groupId>
         <artifactId>pepperModules-SaltXMLModules</artifactId>
         <version>2.1.1</version>
-      </dependency>
+      </dependency> -->
 
 
       <dependency>
