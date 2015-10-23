@@ -38,8 +38,8 @@
     -->
 
     <!-- Maven and OSGI version of the Pepper core modules -->
-    <pepper.core.version>2.1.1</pepper.core.version>
-    <pepper.core.version.osgi>2.1.1</pepper.core.version.osgi>
+    <pepper.core.version>2.1.2</pepper.core.version>
+    <pepper.core.version.osgi>2.1.2</pepper.core.version.osgi>
     <!--
     <pepper.core.version>1.1.6-SNAPSHOT</pepper.core.version>
     <pepper.core.version.osgi>1.1.6.SNAPSHOT</pepper.core.version.osgi>
@@ -63,8 +63,12 @@
 
   <!-- Maven repository containing Salt'n'Pepper -->
   <repositories>
-    <repository>
+	<!-- <repository>
       <id>Korpling</id>
+      <url>file:///home/stephan/.m2/repository/de/hu_berlin/german/korpling/</url>
+    </repository>-->
+        <repository>
+      <id>Korpling2</id>
       <url>http://korpling.german.hu-berlin.de/maven2</url>
     </repository>
   </repositories>
