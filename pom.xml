@@ -24,7 +24,7 @@
 
   <properties>
 
-    <eclipse.repository.location>http://download.eclipse.org/releases/indigo/</eclipse.repository.location>
+    <eclipse.repository.location>http://download.eclipse.org/releases/mars/</eclipse.repository.location>
 
     <!-- Version of Tycho -->
     <tycho.version>0.23.0</tycho.version>
@@ -51,7 +51,7 @@
 
     <!-- Reactor and target mirror location of the Pepper repository -->
     <pepper.repository.location.reactor>file://home/stephan/git/pepperclipse/pepper-repository/target/repository</pepper.repository.location.reactor>
-    <pepper.repository.location.mirror>/home/stephan/Dokumente/p2/pepperclipse/</pepper.repository.location.mirror>
+    <pepper.repository.location.mirror>/home/stephan/Dokumente/p2/pepperclipse2/</pepper.repository.location.mirror>
     <!-- Whether to include bundles required by Pepper in the Pepper repository -->
     <pepper.repository.location.includeAllDependencies>true</pepper.repository.location.includeAllDependencies>
 
